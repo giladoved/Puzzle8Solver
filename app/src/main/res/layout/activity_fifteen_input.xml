@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="32sp"
+        android:text="Enter the 15 puzzle"
+        android:padding="10dp"
+        android:layout_marginBottom="15dp"
+        android:layout_gravity="center_horizontal" />
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:columnCount="4"
+        android:rowCount="4"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|top"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:ems="2"
+            android:layout_marginTop="10dp"
+            android:inputType="number"
+            android:nextFocusDown="@+id/input152"
+            android:id="@+id/input151" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|top"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:ems="2"
+            android:layout_marginTop="10dp"
+            android:inputType="number"
+            android:nextFocusDown="@+id/input153"
+            android:id="@+id/input152" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|top"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:ems="2"
+            android:layout_marginTop="10dp"
+            android:inputType="number"
+            android:nextFocusDown="@+id/input154"
+            android:id="@+id/input153" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|top"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:ems="2"
+            android:layout_marginTop="10dp"
+            android:inputType="number"
+            android:nextFocusDown="@+id/input155"
+            android:id="@+id/input154" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|top"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:layout_marginTop="10dp"
+            android:inputType="number"
+            android:ems="2"
+            android:nextFocusDown="@+id/input156"
+            android:id="@+id/input155" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|top"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:layout_marginTop="10dp"
+            android:inputType="number"
+            android:ems="2"
+            android:nextFocusDown="@+id/input157"
+            android:id="@+id/input156" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|top"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:layout_marginTop="10dp"
+            android:inputType="number"
+            android:ems="2"
+            android:nextFocusDown="@+id/input158"
+            android:id="@+id/input157" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|top"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:layout_marginTop="10dp"
+            android:inputType="number"
+            android:ems="2"
+            android:nextFocusDown="@+id/input159"
+            android:id="@+id/input158" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|top"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:layout_marginTop="10dp"
+            android:inputType="number"
+            android:ems="2"
+            android:nextFocusDown="@+id/input1510"
+            android:id="@+id/input159" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|top"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:layout_marginTop="10dp"
+            android:inputType="number"
+            android:ems="2"
+            android:nextFocusDown="@+id/input1511"
+            android:id="@+id/input1510" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|top"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:layout_marginTop="10dp"
+            android:inputType="number"
+            android:ems="2"
+            android:nextFocusDown="@+id/input1512"
+            android:id="@+id/input1511" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|top"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:layout_marginTop="10dp"
+            android:inputType="number"
+            android:ems="2"
+            android:nextFocusDown="@+id/input1513"
+            android:id="@+id/input1512" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|top"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:layout_marginTop="10dp"
+            android:inputType="number"
+            android:ems="2"
+            android:nextFocusDown="@+id/input1514"
+            android:id="@+id/input1513" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|top"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:layout_marginTop="10dp"
+            android:inputType="number"
+            android:ems="2"
+            android:nextFocusDown="@+id/input1515"
+            android:id="@+id/input1514" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|top"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:layout_marginTop="10dp"
+            android:inputType="number"
+            android:ems="2"
+            android:nextFocusDown="@+id/input1516"
+            android:id="@+id/input1515" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|top"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:layout_marginTop="10dp"
+            android:inputType="number"
+            android:ems="2"
+            android:id="@+id/input1516" />
+
+    </GridLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:text="Solve!"
+        android:id="@+id/solve15Btn"
+        android:layout_gravity="center_horizontal" />
+
+
+</LinearLayout>
+

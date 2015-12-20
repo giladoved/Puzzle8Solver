@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="32sp"
+        android:text="Enter the 8 puzzle"
+        android:padding="10dp"
+        android:layout_marginBottom="15dp"
+        android:layout_gravity="center_horizontal" />
+
+    <GridLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:rowCount="3"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|top"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:inputType="number"
+            android:ems="3"
+            android:nextFocusDown="@+id/input82"
+            android:layout_row="0"
+            android:layout_column="0"
+            android:id="@+id/input81" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|top"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:inputType="number"
+            android:ems="3"
+            android:layout_row="0"
+            android:layout_column="1"
+            android:nextFocusDown="@+id/input83"
+            android:id="@+id/input82" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|top"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:inputType="number"
+            android:ems="3"
+            android:layout_row="0"
+            android:layout_column="2"
+            android:nextFocusDown="@+id/input84"
+            android:id="@+id/input83" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|top"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:layout_marginTop="10dp"
+            android:inputType="number"
+            android:ems="3"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:nextFocusDown="@+id/input85"
+            android:id="@+id/input84" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|top"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:layout_marginTop="10dp"
+            android:inputType="number"
+            android:ems="3"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:nextFocusDown="@+id/input86"
+            android:id="@+id/input85" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|top"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:layout_marginTop="10dp"
+            android:inputType="number"
+            android:ems="3"
+            android:layout_row="1"
+            android:layout_column="2"
+            android:nextFocusDown="@+id/input87"
+            android:id="@+id/input86" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|top"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:layout_marginTop="10dp"
+            android:inputType="number"
+            android:ems="3"
+            android:layout_row="2"
+            android:layout_column="0"
+            android:nextFocusDown="@+id/input88"
+            android:id="@+id/input87" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|top"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:layout_marginTop="10dp"
+            android:inputType="number"
+            android:ems="3"
+            android:layout_row="2"
+            android:layout_column="1"
+            android:nextFocusDown="@+id/input89"
+            android:id="@+id/input88" />
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="left|top"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:layout_marginTop="10dp"
+            android:inputType="number"
+            android:ems="3"
+            android:layout_row="2"
+            android:layout_column="2"
+            android:id="@+id/input89" />
+
+    </GridLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="20dp"
+        android:textSize="20sp"
+        android:text="Solve!"
+        android:id="@+id/solve8Btn"
+        android:layout_gravity="center_horizontal" />
+
+
+</LinearLayout>
+
