@@ -2,13 +2,15 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
 
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:textAlignment="center"
         android:textSize="32sp"
+        android:textColor="#FFFFFF"
         android:text="Enter the 15 puzzle"
         android:padding="10dp"
         android:layout_marginBottom="15dp"
@@ -29,6 +31,7 @@
             android:textAlignment="center"
             android:textSize="24sp"
             android:ems="2"
+            android:textColor="#FFFFFF"
             android:layout_marginTop="10dp"
             android:inputType="number"
             android:nextFocusDown="@+id/input152"
@@ -40,6 +43,7 @@
             android:textAlignment="center"
             android:textSize="24sp"
             android:ems="2"
+            android:textColor="#FFFFFF"
             android:layout_marginTop="10dp"
             android:inputType="number"
             android:nextFocusDown="@+id/input153"
@@ -51,6 +55,7 @@
             android:textAlignment="center"
             android:textSize="24sp"
             android:ems="2"
+            android:textColor="#FFFFFF"
             android:layout_marginTop="10dp"
             android:inputType="number"
             android:nextFocusDown="@+id/input154"
@@ -62,6 +67,7 @@
             android:textAlignment="center"
             android:textSize="24sp"
             android:ems="2"
+            android:textColor="#FFFFFF"
             android:layout_marginTop="10dp"
             android:inputType="number"
             android:nextFocusDown="@+id/input155"
@@ -75,6 +81,7 @@
             android:layout_marginTop="10dp"
             android:inputType="number"
             android:ems="2"
+            android:textColor="#FFFFFF"
             android:nextFocusDown="@+id/input156"
             android:id="@+id/input155" />
         <EditText
@@ -86,6 +93,7 @@
             android:layout_marginTop="10dp"
             android:inputType="number"
             android:ems="2"
+            android:textColor="#FFFFFF"
             android:nextFocusDown="@+id/input157"
             android:id="@+id/input156" />
         <EditText
@@ -97,6 +105,7 @@
             android:layout_marginTop="10dp"
             android:inputType="number"
             android:ems="2"
+            android:textColor="#FFFFFF"
             android:nextFocusDown="@+id/input158"
             android:id="@+id/input157" />
         <EditText
@@ -108,6 +117,7 @@
             android:layout_marginTop="10dp"
             android:inputType="number"
             android:ems="2"
+            android:textColor="#FFFFFF"
             android:nextFocusDown="@+id/input159"
             android:id="@+id/input158" />
         <EditText
@@ -119,6 +129,7 @@
             android:layout_marginTop="10dp"
             android:inputType="number"
             android:ems="2"
+            android:textColor="#FFFFFF"
             android:nextFocusDown="@+id/input1510"
             android:id="@+id/input159" />
         <EditText
@@ -130,6 +141,7 @@
             android:layout_marginTop="10dp"
             android:inputType="number"
             android:ems="2"
+            android:textColor="#FFFFFF"
             android:nextFocusDown="@+id/input1511"
             android:id="@+id/input1510" />
         <EditText
@@ -141,6 +153,7 @@
             android:layout_marginTop="10dp"
             android:inputType="number"
             android:ems="2"
+            android:textColor="#FFFFFF"
             android:nextFocusDown="@+id/input1512"
             android:id="@+id/input1511" />
         <EditText
@@ -152,6 +165,7 @@
             android:layout_marginTop="10dp"
             android:inputType="number"
             android:ems="2"
+            android:textColor="#FFFFFF"
             android:nextFocusDown="@+id/input1513"
             android:id="@+id/input1512" />
         <EditText
@@ -163,6 +177,7 @@
             android:layout_marginTop="10dp"
             android:inputType="number"
             android:ems="2"
+            android:textColor="#FFFFFF"
             android:nextFocusDown="@+id/input1514"
             android:id="@+id/input1513" />
         <EditText
@@ -174,6 +189,7 @@
             android:layout_marginTop="10dp"
             android:inputType="number"
             android:ems="2"
+            android:textColor="#FFFFFF"
             android:nextFocusDown="@+id/input1515"
             android:id="@+id/input1514" />
         <EditText
@@ -185,6 +201,7 @@
             android:layout_marginTop="10dp"
             android:inputType="number"
             android:ems="2"
+            android:textColor="#FFFFFF"
             android:nextFocusDown="@+id/input1516"
             android:id="@+id/input1515" />
         <EditText
@@ -196,6 +213,7 @@
             android:layout_marginTop="10dp"
             android:inputType="number"
             android:ems="2"
+            android:textColor="#FFFFFF"
             android:id="@+id/input1516" />
 
     </GridLayout>

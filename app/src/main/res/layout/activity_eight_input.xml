@@ -2,8 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary">
 
     <TextView
         android:layout_width="fill_parent"
@@ -11,6 +11,7 @@
         android:textAlignment="center"
         android:textSize="32sp"
         android:text="Enter the 8 puzzle"
+        android:textColor="#FFFFFF"
         android:padding="10dp"
         android:layout_marginBottom="15dp"
         android:layout_gravity="center_horizontal" />
@@ -28,6 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="left|top"
             android:textAlignment="center"
+            android:textColor="#FFFFFF"
             android:textSize="24sp"
             android:inputType="number"
             android:ems="3"
@@ -39,6 +41,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="left|top"
+            android:textColor="#FFFFFF"
             android:textAlignment="center"
             android:textSize="24sp"
             android:inputType="number"
@@ -53,6 +56,7 @@
             android:layout_gravity="left|top"
             android:textAlignment="center"
             android:textSize="24sp"
+            android:textColor="#FFFFFF"
             android:inputType="number"
             android:ems="3"
             android:layout_row="0"
@@ -66,6 +70,7 @@
             android:textAlignment="center"
             android:textSize="24sp"
             android:layout_marginTop="10dp"
+            android:textColor="#FFFFFF"
             android:inputType="number"
             android:ems="3"
             android:layout_row="1"
@@ -81,6 +86,7 @@
             android:layout_marginTop="10dp"
             android:inputType="number"
             android:ems="3"
+            android:textColor="#FFFFFF"
             android:layout_row="1"
             android:layout_column="1"
             android:nextFocusDown="@+id/input86"
@@ -93,6 +99,7 @@
             android:textSize="24sp"
             android:layout_marginTop="10dp"
             android:inputType="number"
+            android:textColor="#FFFFFF"
             android:ems="3"
             android:layout_row="1"
             android:layout_column="2"
@@ -106,6 +113,7 @@
             android:textSize="24sp"
             android:layout_marginTop="10dp"
             android:inputType="number"
+            android:textColor="#FFFFFF"
             android:ems="3"
             android:layout_row="2"
             android:layout_column="0"
@@ -120,6 +128,7 @@
             android:layout_marginTop="10dp"
             android:inputType="number"
             android:ems="3"
+            android:textColor="#FFFFFF"
             android:layout_row="2"
             android:layout_column="1"
             android:nextFocusDown="@+id/input89"
@@ -132,6 +141,7 @@
             android:textSize="24sp"
             android:layout_marginTop="10dp"
             android:inputType="number"
+            android:textColor="#FFFFFF"
             android:ems="3"
             android:layout_row="2"
             android:layout_column="2"
@@ -148,6 +158,8 @@
         android:textSize="20sp"
         android:text="Solve!"
         android:id="@+id/solve8Btn"
+        android:textColor="@color/colorText"
+        android:background="@color/colorGray"
         android:layout_gravity="center_horizontal" />
 
 

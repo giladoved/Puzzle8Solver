@@ -2,46 +2,50 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary">
 
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:textAlignment="center"
         android:textSize="42sp"
+        android:textColor="#FFFFFF"
         android:text="Puzzle 8 and 15 Solver"
         android:padding="25dp"
         android:layout_marginBottom="20dp"
         android:layout_gravity="center_horizontal" />
 
     <LinearLayout
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_gravity="center_horizontal"
-        android:padding="30dp"
-        android:weightSum="1">
+        android:padding="30dp">
 
         <Button
             android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:layout_weight=".5"
+            android:layout_height="100dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
             android:text="8"
             android:padding="5dp"
             android:textSize="30sp"
             android:id="@+id/eightBtn"
-            android:layout_gravity="center_horizontal" />
+            android:textColor="@color/colorText"
+            android:background="@color/colorGray" />
 
         <Button
             android:layout_width="match_parent"
-            android:layout_height="150dp"
-            android:layout_weight=".5"
+            android:layout_height="100dp"
             android:text="15"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
             android:padding="5dp"
             android:textSize="30sp"
+            android:layout_marginTop="30dp"
             android:id="@+id/fifteenBtn"
-            android:layout_gravity="center_horizontal" />
+            android:textColor="@color/colorText"
+            android:background="@color/colorGray" />
 
     </LinearLayout>
 

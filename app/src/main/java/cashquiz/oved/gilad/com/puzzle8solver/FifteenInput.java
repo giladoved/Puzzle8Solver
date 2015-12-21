@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class FifteenInput extends AppCompatActivity {
 
@@ -37,9 +38,26 @@ public class FifteenInput extends AppCompatActivity {
                     arr[i] = Integer.parseInt(input);
                 }
 
-                Intent i = new Intent(FifteenInput.this, MainActivity.class);
-                i.putExtra("arr", arr);
-                startActivity(i);
+                int count = 0;
+                int [][] b = new int[4][4];
+                for (int i = 0; i < 4; i++) {
+                    for (int j = 0; j < 4; j++) {
+                        b[i][j] = arr[count++];
+                    }
+                }
+
+                Board board = new Board(b);
+                if (board.isValid()) {
+                    if (board.isSolvable()) {
+                        Intent i = new Intent(FifteenInput.this, MainActivity.class);
+                        i.putExtra("arr", arr);
+                        startActivity(i);
+                    } else {
+                        Toast.makeText(getApplicationContext(), "This puzzle is not solvable", Toast.LENGTH_SHORT).show();
+                    }
+                } else {
+                    Toast.makeText(getApplicationContext(), "Please enter valid numbers", Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }

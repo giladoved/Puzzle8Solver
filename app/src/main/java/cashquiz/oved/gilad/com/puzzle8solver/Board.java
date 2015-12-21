@@ -67,6 +67,17 @@ public class Board {
         return false;
     }
 
+    // is the board valid?
+    public boolean isValid() {
+        for (int i = 0; i < size(); i++) {
+            for (int j = 0; j < size(); j++) {
+                if (getValue(i, j) < 1 || getValue(i, j) > (size()*size()-1))
+                    return false;
+            }
+        }
+        return true;
+    }
+
     // does this board equal y?
     public boolean equals(Board y) {
         if (y.size() != size())
