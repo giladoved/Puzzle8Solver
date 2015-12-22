@@ -2,9 +2,8 @@ package cashquiz.oved.gilad.com.puzzle8solver;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.HashMap;
-import java.util.HashSet;
+import java.util.Map;
 import java.util.PriorityQueue;
 
 /**
@@ -22,80 +21,54 @@ public class Solver {
 
     // min number of moves to solve initial board
     public int moves() {
+        if (minMoves == Integer.MAX_VALUE) {
+            minMoves = solution().size();
+        }
         return minMoves;
     }
 
     // sequence of boards in a shortest solution
     public ArrayList<Board> solution() {
-        PriorityQueue<Node> frontier = new PriorityQueue<>();
-        HashMap<Board, Node> frontierHash = new HashMap<Board, Node>();
-        HashSet<Board> explored = new HashSet<Board>();
+        Map<Board, Board> parents = new HashMap<Board, Board>();
         ArrayList<Board> path = new ArrayList<Board>();
+        PriorityQueue<Board> frontier = new PriorityQueue<Board>();
 
-        frontier.add(new Node(initialState, null));
-        while (true) {
-            if (frontier.isEmpty()) {
-                System.out.println("No Solution!!");
-                return null;
+        frontier.add(initialState);
+        parents.put(initialState, null);
+
+        int count = 0;
+
+        boolean solvable = false;
+        Board goalBoard = null;
+
+        while (!frontier.isEmpty() && count++ < 500000) {
+            Board nextBoard = frontier.poll();
+
+            if (nextBoard.isGoal()) {
+                solvable = true;
+                goalBoard = nextBoard;
+                break;
             }
 
-            Node n = frontier.poll();
-            Board h = n.node;
-            if (h.isGoal()) {
-                ArrayList<Node> nodes = new ArrayList<Node>();
-                Node currNode = n;
-                while (currNode != null) {
-                    nodes.add(currNode);
-                    currNode = frontierHash.get(currNode.parent);
+            for (Board neighbor : nextBoard.neighbors()) {
+                if (parents.get(neighbor) == null) {
+                    frontier.add(neighbor);
+                    parents.put(neighbor, nextBoard);
                 }
-                nodes.add(new Node(initialState, null));
-                Collections.reverse(nodes);
-
-                for (Node node : nodes) {
-                    path.add(node.node);
-                }
-
-                return path;
             }
-
-            for (Board a : h.neighbors()) {
-                if (explored.contains(a) || frontier.contains(a)) {
-                    continue;
-                }
-                Node node = new Node(a, h);
-                frontier.add(node);
-                frontierHash.put(a, node);
-            }
-            explored.add(h);
         }
-    }
 
-    public static void main(String[] args) {
-        int[][] i = {{1, 2, 3}, {4, 5, 6}, {7, 0, 8}};
-        Board initial = new Board(i);
-        Solver solver = new Solver(initial);
-        for (Board board : solver.solution())
-            System.out.println(board);
-    }
+        if (solvable) {
+            Board board = goalBoard;
+            path.add(goalBoard);
+            while (board != initialState) {
+                board = parents.get(board);
+                path.add(board);
+            }
 
-}
+            Collections.reverse(path);
+        }
 
-class Node implements Comparator<Node>, Comparable<Node> {
-    public Board node;
-    public Board parent;
-
-    public Node(Board n, Board p) {
-        node = n;
-        parent = p;
-    }
-
-    @Override
-    public int compare(Node b1, Node b2) {
-        return b2.node.manhattan() - b1.node.manhattan();
-    }
-
-    @Override
-    public int compareTo(Node b) {
-        return node.manhattan() - b.node.manhattan();
+        return path;
     }
 }

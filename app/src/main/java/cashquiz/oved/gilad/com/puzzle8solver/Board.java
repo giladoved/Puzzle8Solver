@@ -3,12 +3,14 @@ package cashquiz.oved.gilad.com.puzzle8solver;
 /**
  * Created by gilad on 12/19/15.
  */
+
 import java.util.ArrayList;
 
 //https://www.cs.princeton.edu/courses/archive/fall12/cos226/assignments/8puzzle.html
-public class Board {
+public class Board implements Comparable<Board> {
 
     private int [][] board;
+    private int moves;
 
     // construct a board from an N-by-N array of blocks
     // (where blocks[i][j] = block in row i, column j)
@@ -26,15 +28,16 @@ public class Board {
         return board.length;
     }
 
+    public int goalValue(int i, int j) {
+        return i * size() + j + 1;
+    }
+
     // number of blocks out of place
     public int hamming() {
         int count = 0;
         for (int i = 0; i < size(); i++) {
             for (int j = 0; j < size(); j++) {
-                int correctNum = (i * size()) + j + 1;
-                if (board[i][j] == 0)
-                    continue;
-                if (board[i][j] != correctNum){
+                if (board[i][j] != 0 && board[i][j] != goalValue(i, j)){
                     count++;
                 }
             }
@@ -47,11 +50,11 @@ public class Board {
         int count = 0;
         for (int i = 0; i < size(); i++) {
             for (int j = 0; j < size(); j++) {
-                if (board[i][j] == 0)
-                    continue;
-                int dx = (board[i][j] - 1) / size();
-                int dy = (board[i][j] - 1) % size();
-                count += Math.abs(dx-i) + Math.abs(dy-j);
+                if (board[i][j] != 0 && board[i][j] != goalValue(i, j)) {
+                    int dx = (board[i][j] - 1) / size();
+                    int dy = board[i][j] - 1 - dx * size();
+                    count += Math.abs(i - dx) + Math.abs(j - dy);
+                }
             }
         }
         return count;
@@ -63,15 +66,36 @@ public class Board {
     }
 
     // is the board solvable?
+    //https://www.cs.bham.ac.uk/~mdr/teaching/modules04/java2/TilesSolvability.html
     public boolean isSolvable() {
-        return false;
+        int[] arr = new int[size()*size()];
+        int count = 0;
+        for (int i = 0; i < size(); i++) {
+            for (int j = 0; j < size(); j++) {
+                arr[count++] = board[i][j];
+            }
+        }
+
+        int inversions = 0;
+
+        for (int i = 0; i < arr.length - 1; i++) {
+            for (int j = i + 1; j < arr.length; j++) {
+                if (arr[i] > arr[j])
+                    inversions++;
+            }
+
+            if (arr[i] == 0 && i % 2 == 1)
+                inversions++;
+        }
+
+        return inversions % 2 == 0;
     }
 
     // is the board valid?
     public boolean isValid() {
         for (int i = 0; i < size(); i++) {
             for (int j = 0; j < size(); j++) {
-                if (getValue(i, j) < 1 || getValue(i, j) > (size()*size()-1))
+                if (getValue(i, j) < 0 || getValue(i, j) > (size()*size()-1))
                     return false;
             }
         }
@@ -79,7 +103,9 @@ public class Board {
     }
 
     // does this board equal y?
-    public boolean equals(Board y) {
+    @Override
+    public boolean equals(Object obj) {
+        Board y = (Board)obj;
         if (y.size() != size())
             return false;
         for (int i = 0; i < size(); i++) {
@@ -173,7 +199,7 @@ public class Board {
         for (int i = 0; i < size(); i++) {
             for (int j = 0; j < size(); j++) {
                 if (board[i][j] == 0) {
-                    str.append("   ");
+                    str.append("  ");
                 } else {
                     str.append(board[i][j] + " ");
                 }
@@ -183,18 +209,24 @@ public class Board {
         return str.toString();
     }
 
-    //unit tests
-    public static void main(String[] args) {
-        int[][] test = {{8, 1, 3}, {4, 0, 2}, {7, 6, 5}};
-        Board board = new Board(test);
-        System.out.println(board.toString());
-        System.out.println("size: " + board.size());
-        System.out.println("hamming: " + board.hamming());
-        System.out.println("manhattan: " + board.manhattan());
-        for (Board b : board.neighbors()) {
-            System.out.println("neighbor... ");
-            System.out.println(b.toString());
+    @Override
+    public int hashCode(){
+        int hash = 0;
+
+        for (int i = 0; i < size(); i++) {
+            for (int j = 0; j < size(); j++) {
+                hash += getValue(i, j)*(i+1)*(j+1);
+            }
         }
+
+        return hash;
     }
 
+    @Override
+    public int compareTo(Board that) {
+        int two = manhattan() + hamming();
+        int one = that.manhattan() + that.hamming();
+
+        return two - one;
+    }
 }
