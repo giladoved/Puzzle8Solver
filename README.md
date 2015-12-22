@@ -1,5 +1,5 @@
-# Puzzle 8 and 15 Solver
-A simple Puzzle 8 and Puzzle 15 solver app for Android
+# 8 Puzzle and 15 Puzzle Solver
+A simple 8 Puzzle and 15 Puzzle solver app for Android
 
 This uses an A star search algorithm to find a solution. It uses both manhattan and hamming hueristics to determine which move to make next. It can determine if a puzzle is initially solvable. 
 
