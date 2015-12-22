@@ -7,4 +7,9 @@ I made this app only to supplement and visualize [this programming assignment](h
 
 To further improve this app. It would useful to implement a cache for the hueristic functions to improve speed. To save memory, it would be beneficial to implement the IDA star algorithm instead. 
 
-Check it out (here)[https://play.google.com/store/apps/details?id=cashquiz.oved.gilad.com.puzzle8solver]
+Check it out [here](https://play.google.com/store/apps/details?id=cashquiz.oved.gilad.com.puzzle8solver)
+
+![alt text](https://lh3.googleusercontent.com/ZiTzV3CzCXcTzF11rWXH8sM7_G4eHu3sSt10RL31NNChun_qe3iEY8Tocno5CmpCkR4=h900-rw "Screenshot 1")
+![alt text](https://lh3.googleusercontent.com/kct3Jvu48AhuBN2QgOdurUdTrgc16DZX--EuHiietjwFjj0qZ9zkOX--AZF8a_kMvA=h900-rw "Screenshot 2")
+![alt text](https://lh3.googleusercontent.com/Rm0h1QjuWmZUbsTYSnUjU2SM5MprzBEyfNRCJR84EPKcLRM10bHp5LVvuhjkd4KoHA=h900-rw "Screenshot 3")
+
