@@ -6,3 +6,5 @@ This uses an A star search algorithm to find a solution. It uses both manhattan 
 I made this app only to supplement and visualize [this programming assignment](https://www.cs.princeton.edu/courses/archive/fall12/cos226/assignments/8puzzle.html) I decided to complete to improve my computer science skills. 
 
 To further improve this app. It would useful to implement a cache for the hueristic functions to improve speed. To save memory, it would be beneficial to implement the IDA star algorithm instead. 
+
+Check it out (here)[https://play.google.com/store/apps/details?id=cashquiz.oved.gilad.com.puzzle8solver]
